@@ -1,17 +1,19 @@
 import axios from "axios";
 
-// Create API instance with timeouts and proper error handling
 const api = axios.create({
   baseURL: "https://finalbackend-hherc0arefhubdbk.centralindia-01.azurewebsites.net/api",
-  timeout: 10000, // 10 second timeout
+  withCredentials: true,   // ensures cookies/session if backend ever uses them
+  timeout: 10000,          // optional but good for Azure timeouts
   headers: {
-    'Content-Type': 'application/json'
+    "Content-Type": "application/json"
   }
 });
 
+// attach Authorization header if token exists
 api.interceptors.request.use(cfg => {
   const token = localStorage.getItem("token");
   if (token) cfg.headers.Authorization = `Bearer ${token}`;
   return cfg;
 });
+
 export default api;
