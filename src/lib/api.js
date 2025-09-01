@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://finalbackend-hherc0arefhubdbk.centralindia-01.azurewebsites.net/api",
+  baseURL: "https://finalbackend-hherc0arefhubdbk.centralindia-01.azurewebsites.net",
 });
 
 api.interceptors.request.use((cfg) => {
