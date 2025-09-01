@@ -2,14 +2,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import api from "../api";
 
-// ✅ NEW: recharts for visualization
+// ✅ recharts for visualization
 import {
-  Bar,
   PieChart,
   Pie,
   Cell,
-  XAxis,
-  YAxis,
   Tooltip,
   ResponsiveContainer,
   Legend,
@@ -250,27 +247,26 @@ export default function AdminReview() {
         </Card>
       </section>
 
-        <Card>
-          <h4 className="mb-sm">Claims Distribution (Pie)</h4>
-          <ResponsiveContainer width="100%" height={250}>
-            <PieChart>
-              <Pie
-                data={chartData}
-                dataKey="value"
-                nameKey="name"
-                outerRadius={80}
-                label
-              >
-                {chartData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                ))}
-              </Pie>
-              <Tooltip />
-              <Legend />
-            </PieChart>
-          </ResponsiveContainer>
-        </Card>
-      </section>
+      <Card>
+        <h4 className="mb-sm">Claims Distribution (Pie)</h4>
+        <ResponsiveContainer width="100%" height={250}>
+          <PieChart>
+            <Pie
+              data={chartData}
+              dataKey="value"
+              nameKey="name"
+              outerRadius={80}
+              label
+            >
+              {chartData.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+              ))}
+            </Pie>
+            <Tooltip />
+            <Legend />
+          </PieChart>
+        </ResponsiveContainer>
+      </Card>
 
       {/* Search row */}
       <div className="toolbar">
