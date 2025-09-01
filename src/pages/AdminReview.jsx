@@ -4,7 +4,6 @@ import api from "../api";
 
 // ✅ NEW: recharts for visualization
 import {
-  BarChart,
   Bar,
   PieChart,
   Pie,
