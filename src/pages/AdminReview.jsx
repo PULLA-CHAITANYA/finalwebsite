@@ -251,25 +251,6 @@ export default function AdminReview() {
         </Card>
       </section>
 
-      {/* ✅ NEW: Visualization charts */}
-      <section className="grid-cards">
-        <Card>
-          <h4 className="mb-sm">Claims Overview (Bar)</h4>
-          <ResponsiveContainer width="100%" height={250}>
-            <BarChart data={chartData}>
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="value" fill="#3b82f6">
-                {chartData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        </Card>
-
         <Card>
           <h4 className="mb-sm">Claims Distribution (Pie)</h4>
           <ResponsiveContainer width="100%" height={250}>
