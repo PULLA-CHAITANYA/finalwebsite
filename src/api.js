@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Create API instance with timeouts and proper error handling
 const api = axios.create({
-  baseURL: "finalbackend-hherc0arefhubdbk.centralindia-01.azurewebsites.net",
+  baseURL: "https://finalbackend-hherc0arefhubdbk.centralindia-01.azurewebsites.net",
   timeout: 10000, // 10 second timeout
   headers: {
     'Content-Type': 'application/json'
