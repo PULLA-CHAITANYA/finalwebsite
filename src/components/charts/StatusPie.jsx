@@ -5,7 +5,7 @@ export default function StatusPie({ typeCounts = {}, title = "Claim Status" }) {
     { name: "Pending", value: Number(typeCounts?.Pending || 0) },
     { name: "Approved", value: Number(typeCounts?.Approved || 0) },
     { name: "Rejected", value: Number(typeCounts?.Rejected || 0) },
-  ].filter(d => d.value > 0);
+  ];
 
   const COLORS = ["#ffc658", "#82ca9d", "#ff8078"];
 
