@@ -101,7 +101,7 @@ export default function ProviderDashboard() {
           <div className="stat">
             <span className="stat-label">Approved</span>
             <span className="stat-value">
-              {stats?.statusCounts?.Approved ?? 0}
+              {stats?.typeCounts?.Approved ?? 0}
             </span>
           </div>
         </div>
